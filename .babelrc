@@ -1,0 +1,19 @@
+{
+    "presets": ["es2015"],
+    "plugins": [
+        ["module-resolver", {
+                "root": ["."],
+                "alias": {
+                    "app": "./src/app",
+                    "api": "./src/classes/api",
+                    "ui": "./src/ui/ui.js",
+                    "logger": "./src/classes/logger",
+                    "models" : "./src/models",
+                    "repositories" : "./src/classes/repositories",
+                    "components": "./src/ui/components",
+                    "json_editor": "./src/ui/components/editor"
+                }
+            }
+        ]
+    ]
+}

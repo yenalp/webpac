@@ -1,0 +1,62 @@
+{
+  "extends":["airbnb/base", "eslint:recommended"],
+  "plugins": [ "html",  "babel" ],
+  "settings": {
+    "import/parser": "babel-eslint",
+    "html/html-extensions": [".html", ".vue"],
+    "import/resolver": {
+      "webpack": "webpack",
+      "babel-module": {}
+    },
+    "import/core-modules": [ "models", "ui", "components", "sugar", "moment", "bootstrap4", "bootstrap-theme", "json-editor", "ace", "sceditor", "datatables", "vuejs", "vue-router"]
+},
+"parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+"rules": {
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+    "no-restricted-syntax": ["off", "ForOfStatement"],
+    "indent": ["error", 4],
+    "eqeqeq": ["error", "always"],
+    "no-console":0,
+    "no-control-regex":0,
+    "babel/new-cap": [
+      1,
+      {
+        "capIsNewExceptions": [
+          "Deferred",
+          "DataTable",
+          "Handlebars",
+          "Sugar"
+        ]
+      }
+    ],
+    "babel/object-curly-spacing": 0,
+    "babel/no-await-in-loop": 1,
+    "babel/no-invalid-this": 1,
+    "no-var": 1
+  },
+  "env": {
+    "jquery": true,
+    "node": true,
+    "browser": true,
+    "es6": true
+  },
+  "globals": {
+    "app": true,
+    "constants": true,
+    "jsonEditor": true,
+    "JSONEditor": true,
+    "window": true,
+    "localStorage": true,
+    "document": true,
+    "toastr": true,
+    "jquery": true,
+    "console": true,
+    "moment": true
+  }
+}
